@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.azdatastore"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <service
+            android:name="com.azdatastore.events.MyDriveEventService"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.android.gms.drive.events.HANDLE_EVENT" />
+            </intent-filter>
+        </service>
+        <activity
+            android:name="com.azdatastore.HomeActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.azdatastore.QueryFilesActivity" />
+        <activity android:name="com.azdatastore.RetrieveContentsActivity" />
+        <activity android:name="com.azdatastore.RetrieveContentsWithProgressDialogActivity" />
+        <activity android:name="com.azdatastore.CreateFileActivity" />
+        <activity android:name="com.azdatastore.CreateEmptyFileActivity" />
+        <activity android:name="com.azdatastore.CreateFileInAppFolderActivity" />
+        <activity android:name="com.azdatastore.CreateFolderActivity" />
+        <activity android:name="com.azdatastore.DeleteFileActivity" />
+        <activity android:name="com.azdatastore.AppendContentsActivity" />
+        <activity android:name="com.azdatastore.RewriteContentsActivity" />
+        <activity android:name="com.azdatastore.EditMetadataActivity" />
+        <activity android:name="com.azdatastore.CreateFileWithCreatorActivity" />
+        <activity android:name="com.azdatastore.RetrieveMetadataActivity" />
+        <activity android:name="com.azdatastore.CreateFileInFolderActivity" />
+        <activity android:name="com.azdatastore.CreateFolderInFolderActivity" />
+        <activity android:name="com.azdatastore.QueryFilesInFolderActivity" />
+        <activity android:name="com.azdatastore.PinFileActivity" />
+        <activity android:name="com.azdatastore.events.ListenChangeEventsForFilesActivity" />
+        <activity android:name="com.azdatastore.events.SubscribeChangeEventsForFilesActivity" />
+        <activity android:name="com.azdatastore.QueryNonTextFilesActivity" />
+        <activity android:name="com.azdatastore.QueryFilesSharedWithMeActivity" />
+        <activity android:name="com.azdatastore.QueryFilesWithTitleActivity" />
+        <activity android:name="com.azdatastore.QueryStarredTextFilesActivity" />
+        <activity android:name="com.azdatastore.QueryTextOrHtmlFilesActivity" />
+        <activity android:name="com.azdatastore.InsertUpdateCustomPropertyActivity" />
+        <activity android:name="com.azdatastore.QueryFilesWithCustomPropertyActivity" />
+        <activity android:name="com.azdatastore.DeleteCustomPropertyActivity" />
+        <activity android:name="com.azdatastore.QuerySortedFilesActivity" />
+    </application>
+
+</manifest>
